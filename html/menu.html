@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Jarg's Kitchen</title>
+    <link rel="stylesheet" href="../assets/css/menu.css">
+</head>
+<body>
+    <!-- Header --> 
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="logo">
+                <img src="../assets/images/menu/logo.jpg" alt="Cheyan Cafe Logo" class="logo-icon">
+                <span>Jarg's Kitchen</span>
+            </a>   
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="menu.html" class="active">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-toggle" onclick="toggleMobileMenu()">
+                ☰
+                <span class="cart-counter" id="cartCounter">0</span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <!-- Menu Hero -->
+        <section class="menu-hero">
+            <div class="container">
+                <h1>Our Menu</h1>
+                <p>Explore our juicy burgers, crispy fries, and mouthwatering sides made fresh every day</p>
+            </div>
+        </section>
+
+        <!-- Search and Filter Controls -->
+        <section class="controls">
+            <div class="container">
+                <div class="controls-content">
+                    <div class="search-box">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" class="search-input" placeholder="Search menu items..." id="searchInput">
+                    </div>
+                    <select class="filter-select" id="categoryFilter">
+                        <option value="all">All Categories</option>
+                        <option value="burgers">Burgers</option>
+                        <option value="sides">Sides</option>
+                        <option value="drinks">Drinks</option>
+                        <option value="combos">Combos</option>
+                    </select>
+                    <select class="sort-select" id="sortSelect">
+                        <option value="name">Sort by Name</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Highest Rated</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Grid -->
+        <section class="products-section">
+            <div class="container">
+                <div class="products-grid" id="productsGrid">
+                    <!-- Products will be dynamically loaded here -->
+                </div>
+                <div class="no-results" id="noResults">
+                    <div class="no-results-icon">🔍</div>
+                    <h3>No items found</h3>
+                    <p>Try adjusting your search or filters</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Summary -->
+    <div class="cart-summary" id="cartSummary" onclick="showCartDetails()">
+        <div class="cart-summary-text">🛒 <span id="cartItemCount">0</span> items</div>
+        <div class="cart-total">₱<span id="cartTotal">0.00</span></div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <span>✓</span>
+            <span id="toastMessage">Item added to cart!</span>
+        </div>
+    </div>
+
+    <script src="../assets/js/menu.js"></script>
+
+</body>
+</html>

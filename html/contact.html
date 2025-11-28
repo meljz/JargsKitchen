@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Jarg's Kitchen</title>
+    <link rel="stylesheet" href="../assets/css/contact.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="logo">       
+                <img src="../assets/images/menu/logo.jpg" alt="Cheyan Cafe Logo" class="logo-icon">
+                <span>Jarg's Kitchen</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <button class="mobile-toggle" onclick="toggleMobileMenu()">☰</button>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <!-- Contact Hero -->
+        <section class="contact-hero">
+            <div class="container">
+                <div class="contact-hero-content">
+                    <h1>Get In Touch</h1>
+                    <p>We’d love to hear from you! Whether you have questions, feedback, or want to book catering, we’re here to make your burger experience unforgettable.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Content -->
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Contact Form -->
+                    <div class="contact-form animate-on-scroll">
+                        <div class="success-message" id="successMessage">
+                            <div class="success-icon">✅</div>
+                            <h3>Message Sent Successfully!</h3>
+                            <p>Thank you for reaching out. We’ll get back to you within 24 hours.</p>
+                        </div>
+                        
+                        <h2 class="form-title">Send Us a Message</h2>
+                        <form id="contactForm" novalidate>
+                            <div class="form-group">
+                                <label for="customerName" class="form-label">Full Name *</label>
+                                <input type="text" id="customerName" name="customerName" class="form-input" placeholder="Enter your full name" required>
+                                <div class="error-message" id="nameError">Please enter your full name</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="customerPhone" class="form-label">Contact Number *</label>
+                                <input type="tel" id="customerPhone" name="customerPhone" class="form-input" placeholder="e.g., +63 912 345 6789" required>
+                                <div class="error-message" id="phoneError">Please enter a valid phone number</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="customerEmail" class="form-label">Email Address *</label>
+                                <input type="email" id="customerEmail" name="customerEmail" class="form-input" placeholder="your.email@example.com" required>
+                                <div class="error-message" id="emailError">Please enter a valid email address</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inquiryType" class="form-label">Inquiry Type</label>
+                                <select id="inquiryType" name="inquiryType" class="form-input">
+                                    <option value="general">General Inquiry</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="catering">Catering Services</option>
+                                    <option value="events">Private Events</option>
+                                    <option value="complaints">Complaints</option>
+                                    <option value="partnerships">Business Partnerships</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="customerMessage" class="form-label">Message *</label>
+                                <textarea id="customerMessage" name="customerMessage" class="form-input form-textarea" placeholder="Please share your message, questions, or feedback here..." required></textarea>
+                                <div class="error-message" id="messageError">Please enter your message (minimum 10 characters)</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <input type="checkbox" id="newsletter" name="newsletter" style="margin-right: 10px;">
+                                    Subscribe to our newsletter for burger deals and special offers
+                                </label>
+                            </div>
+
+                            <button type="submit" class="submit-button" id="submitButton">
+                                <span class="loading"></span>
+                                <span class="button-text">Send Message</span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="contact-info">
+                        <div class="info-section animate-on-scroll">
+                            <div class="info-header">
+                                <div class="info-icon">📍</div>
+                                <h3 class="info-title">Visit Us</h3>
+                            </div>
+                            <div class="info-content">
+                                <p><strong>Jarg's Kitchen</strong></p>
+                                <p>456 Burger Avenue, Grill District</p>
+                                <p>Angeles City, Pampanga, Philippines</p>
+                                <p style="margin-top: 1rem;">
+                                    <a href="#" onclick="getDirections()">📱 Get Directions</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="info-section animate-on-scroll">
+                            <div class="info-header">
+                                <div class="info-icon">📞</div>
+                                <h3 class="info-title">Call Us</h3>
+                            </div>
+                            <div class="info-content">
+                                <p><strong>Main Line:</strong></p>
+                                <p><a href="tel:+639451234567">+63 945 123 4567</a></p>
+                                <p><strong>Catering & Events:</strong></p>
+                                <p><a href="tel:+639451234568">+63 945 123 4568</a></p>
+                                <p style="margin-top: 1rem; color: #8B4513;">
+                                    <small>📞 Call us for reservations, catering inquiries, or any burger questions!</small>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="info-section animate-on-scroll">
+                            <div class="info-header">
+                                <div class="info-icon">⏰</div>
+                                <h3 class="info-title">Opening Hours</h3>
+                            </div>
+                            <div class="info-content">
+                                <table class="hours-table">
+                                    <tr>
+                                        <td class="day">Monday - Friday</td>
+                                        <td class="time">10:00 AM - 10:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="day">Saturday</td>
+                                        <td class="time">11:00 AM - 11:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="day">Sunday</td>
+                                        <td class="time">11:00 AM - 9:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="day">Public Holidays</td>
+                                        <td class="time">12:00 PM - 8:00 PM</td>
+                                    </tr>
+                                </table>
+                                <p style="margin-top: 1rem; color: #8B4513; font-size: 0.9rem;">
+                                    🍔 Hungry late? We’re open until night for your burger cravings.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="info-section animate-on-scroll">
+                            <div class="info-header">
+                                <div class="info-icon">✉️</div>
+                                <h3 class="info-title">Email Us</h3>
+                            </div>
+                            <div class="info-content">
+                                <p><strong>General Inquiries:</strong></p>
+                                <p><a href="mailto:hello@jargskitchen.com">hello@jargskitchen.com</a></p>
+                                <p><strong>Catering & Events:</strong></p>
+                                <p><a href="mailto:events@jargskitchen.com">events@jargskitchen.com</a></p>
+                                <p><strong>Feedback & Suggestions:</strong></p>
+                                <p><a href="mailto:feedback@jargskitchen.com">feedback@jargskitchen.com</a></p>
+                                <p style="margin-top: 1rem; color: #8B4513; font-size: 0.9rem;">
+                                    📧 We typically respond within 24 hours during business days.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map Section -->
+
+                <!-- Map Section -->
+                <div class="map-section animate-on-scroll">
+                    <h2 class="map-title">Find Us Here</h2>
+                    <div class="map-placeholder">
+                        <div class="map-icon">🗺️</div>
+                        <p>Interactive Map Coming Soon</p>
+                        <p>123 Coffee Street, Brew District<br>Capas, Central Luzon, Philippines</p>
+                    </div>
+                    <button class="directions-button" onclick="getDirections()">
+                        📍 Get Directions
+                    </button>
+
+                    <!-- Social Media Section -->
+                    <div class="social-section">
+                        <h3 class="social-title">Follow Us on Social Media</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link" title="Facebook" onclick="openSocial('facebook')">📘</a>
+                            <a href="#" class="social-link" title="Instagram" onclick="openSocial('instagram')">📷</a>
+                            <a href="#" class="social-link" title="Twitter" onclick="openSocial('twitter')">🐦</a>
+                            <a href="#" class="social-link" title="TikTok" onclick="openSocial('tiktok')">🎵</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="../assets/js/contact.js"></script>
+</body>
+</html>
