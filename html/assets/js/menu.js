@@ -386,7 +386,8 @@ const products = [
                 const categoryMap = {
                 'other': 'Others',
                 'chicken': 'Chicken',
-                'sandwiches': 'Sandwiches'
+                'sandwiches': 'Sandwiches',
+                'others': 'Others'
             };
             return categoryMap[category] || category;
         }

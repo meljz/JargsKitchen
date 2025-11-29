@@ -313,6 +313,7 @@
         .info-content a:hover {
             color: #D4AF37;
         }
+       
 
         /* Hours Table */
         .hours-table {
@@ -357,7 +358,7 @@
         }
 
         .map-placeholder {
-            height: 400px;
+            height: 300px;
             background: linear-gradient(135deg, #E6E6FA, #DDA0DD);
             border-radius: 15px;
             display: flex;
